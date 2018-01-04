@@ -144,7 +144,8 @@
 	    	$(window).on('load', function(){
 			 //PAGE IS FULLY LOADED 
 			 //FADE OUT YOUR OVERLAYING DIV
-			$('.login-cover').removeClass('hide');
+			
+			setTimeout(function(){ $('.login-cover').removeClass('hide'); }, 3000);
 			 $('#pageloader').fadeOut();
 			});
 	    </script>
