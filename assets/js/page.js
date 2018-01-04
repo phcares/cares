@@ -55,7 +55,8 @@ firebase.auth().onAuthStateChanged(function(user) {
 	    });
 
 	} else {
-	  window.location.replace("index.html");
+		window.location.href = 'index.html';
+// 	  window.location.replace("index.html");
 	}
 });
 
