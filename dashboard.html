@@ -124,10 +124,7 @@
 			</ul>
 	    </div>
 	    <div id="timeRecords">
-	    	<div class="container">
-	    		<div class="row">
-	    			<div class="col s12">
-	    				<br><br><br>
+	    	<br><br><br>
 	    				<div class="card">
 	    					<div class="card-content">
 	    						<span class="card-title flow-text user_fullname">Donna L. Canciller</span>
@@ -136,79 +133,28 @@
 	    				</div>
 	    				<div class="card">
 	    					<div class="card-content">
-	    						<div class="row">
-	    							<div class="col s6 input-field">
-	    								<input type="text" class="datepicker" id="dateFrom">
-	    								<label for="dateFrom">Date From</label>
-	    							</div>
-	    							<div class="col s6 input-field">
-	    								<input type="text" class="datepicker" id="dateTo">
-	    								<label for="dateTo">Date To</label>
-	    							</div>
-	    						</div>
-	    						<ul class="collapsible" data-collapsible="accordion">
-								    <li>
-								      <div class="collapsible-header"><strong>30-December-2017</strong></div>
-								      <div class="collapsible-body">
-								      	<ul class="collection">
-								      		<li class="collection-item"><strong>Location : </strong><span class="right">Marilao, Bulacan</span></li>
-								      		<li class="collection-item"><strong>Time In : </strong><span class="right">08:01:37</span></li>
-								      		<li class="collection-item"><strong>Time Out : </strong><span class="right">12:03:46</span></li>
-								      		<li class="collection-item"><strong>Time In : </strong><span class="right">13:05:03</span></li>
-								      		<li class="collection-item"><strong>Time Out : </strong><span class="right">17:21:08</span></li>
-								      		<li class="collection-item"><strong>Overtime In : </strong><span class="right">--:--:--</span></li>
-								      		<li class="collection-item"><strong>Overtime Out : </strong><span class="right">--:--:--</span></li>
-								      	</ul>
-								      </div>
-								    </li>
-								    <li>
-								      <div class="collapsible-header"><strong>29-December-2017</strong></div>
-								      <div class="collapsible-body">
-								      	<ul class="collection">
-								      		<li class="collection-item"><strong>Location : </strong><span class="right">Marilao, Bulacan</span></li>
-								      		<li class="collection-item"><strong>Time In : </strong><span class="right">08:01:37</span></li>
-								      		<li class="collection-item"><strong>Time Out : </strong><span class="right">12:03:46</span></li>
-								      		<li class="collection-item"><strong>Time In : </strong><span class="right">13:05:03</span></li>
-								      		<li class="collection-item"><strong>Time Out : </strong><span class="right">17:21:08</span></li>
-								      		<li class="collection-item"><strong>Overtime In : </strong><span class="right">--:--:--</span></li>
-								      		<li class="collection-item"><strong>Overtime Out : </strong><span class="right">--:--:--</span></li>
-								      	</ul>
-								      </div>
-								    </li>
-								    <li>
-								      <div class="collapsible-header"><strong>28-December-2017</strong></div>
-								      <div class="collapsible-body">
-								      	<ul class="collection">
-								      		<li class="collection-item"><strong>Location : </strong><span class="right">Marilao, Bulacan</span></li>
-								      		<li class="collection-item"><strong>Time In : </strong><span class="right">08:01:37</span></li>
-								      		<li class="collection-item"><strong>Time Out : </strong><span class="right">12:03:46</span></li>
-								      		<li class="collection-item"><strong>Time In : </strong><span class="right">13:05:03</span></li>
-								      		<li class="collection-item"><strong>Time Out : </strong><span class="right">17:21:08</span></li>
-								      		<li class="collection-item"><strong>Overtime In : </strong><span class="right">--:--:--</span></li>
-								      		<li class="collection-item"><strong>Overtime Out : </strong><span class="right">--:--:--</span></li>
-								      	</ul>
-								      </div>
-								    </li>
-								    <li>
-								      <div class="collapsible-header"><strong>27-December-2017</strong></div>
-								      <div class="collapsible-body">
-								      	<ul class="collection">
-								      		<li class="collection-item"><strong>Location : </strong><span class="right">Marilao, Bulacan</span></li>
-								      		<li class="collection-item"><strong>Time In : </strong><span class="right">08:01:37</span></li>
-								      		<li class="collection-item"><strong>Time Out : </strong><span class="right">12:03:46</span></li>
-								      		<li class="collection-item"><strong>Time In : </strong><span class="right">13:05:03</span></li>
-								      		<li class="collection-item"><strong>Time Out : </strong><span class="right">17:21:08</span></li>
-								      		<li class="collection-item"><strong>Overtime In : </strong><span class="right">--:--:--</span></li>
-								      		<li class="collection-item"><strong>Overtime Out : </strong><span class="right">--:--:--</span></li>
-								      	</ul>
-								      </div>
-								    </li>
-								</ul>
+	    						<h5 class="flow-text reportCaresName"></h5>
+									<div class="input-field">
+										<input type="hidden" id="reportEmail">
+										<input type="text" id="reportDate" class="datepicker">
+										<label for="reportDate">Choose Date</label>
+									</div>
+									
 	    					</div>
 	    				</div>
-	    			</div>
-	    		</div>
-	    	</div>
+	    				
+	    	<p class="reportErrorMessage red-text hide">No Records to show. It may be that the user is absent or has not timed in yet.</p>
+						<ul class="collection with-header ">
+					        <li class="collection-header"><h4>Time Record Report</h4></li>
+					        <li class="collection-item">Date: <span class="right reportDate"></span></li>
+					        <li class="collection-item">Time In: <span class="right reportTimeIn1 ">08:01:26</span></li>
+					        <li class="collection-item">Time Out: <span class="right reportTimeOut1">12:03:35</span></li>
+					        <li class="collection-item">Time In: <span class="right reportTimeIn2">13:03:58</span></li>
+					        <li class="collection-item">Time Out: <span class="right reportTimeOut2">17:05:49</span></li>
+					        <li class="collection-item">OT In: <span class="right reportOverTimeIn">--:--:--</span></li>
+					        <li class="collection-item">OT Out: <span class="right reportOverTimeOut">--:--:--</span></li>
+					        <li class="collection-item">Location: <span class="right reportPlace">Marilao, Bulacan</span></li>
+					    </ul>
 	    </div>
 	    
 		<!-- Modals -->
