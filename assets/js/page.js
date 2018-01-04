@@ -97,6 +97,7 @@ $("#timeInButton").click(function(){
 	          if(doc.data().status === 'Timed Out 1'){
 	          	timeRecords.doc(doc.id).update({
 	          		timeIn2: time,
+				location: location,
 	          		status: 'Timed In 2'
 	          	});
 	          }
@@ -104,6 +105,7 @@ $("#timeInButton").click(function(){
 	          if(doc.data().status === 'Timed Out 2'){
 	          	timeRecords.doc(doc.id).update({
 	          		otTimeIn: time,
+				location: location,
 	          		status: 'Over Time In'
 	          	});
 	          	$('#timeOutButton').html('OT Time Out');
@@ -143,6 +145,7 @@ $("#timeOutButton").click(function(){
 	          if(doc.data().status === 'Timed In 1'){
 	          	timeRecords.doc(doc.id).update({
 	          		timeOut1: time,
+				location: location,
 	          		status: 'Timed Out 1'
 	          	});
 	          }
@@ -150,6 +153,7 @@ $("#timeOutButton").click(function(){
    	          if(doc.data().status === 'Timed In 2'){
 	          	timeRecords.doc(doc.id).update({
 	          		timeOut2: time,
+				location: location,
 	          		status: 'Timed Out 2'
 	          	});
 	          	$('#timeInButton').html('OT Time In');
@@ -158,6 +162,7 @@ $("#timeOutButton").click(function(){
 	          if(doc.data().status === 'Over Time In'){
 	          	timeRecords.doc(doc.id).update({
 	          		otTimeOut: time,
+				location: location,
 	          		status: 'Over Time Out'
 	          	});
 	          	$('#timeInButton').html('End of Shift');
