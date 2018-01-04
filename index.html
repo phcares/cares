@@ -71,7 +71,7 @@
 		    </div>
 		</div>
 
-		<div class="login-cover">
+		<div class="login-cover hide">
 <!-- 			<div class="container">
 				<span class="flow-text white-text">Confirm your 4-Digit PIN</span>
 				<div class="row">
@@ -144,6 +144,7 @@
 	    	$(window).on('load', function(){
 			 //PAGE IS FULLY LOADED 
 			 //FADE OUT YOUR OVERLAYING DIV
+			$('.login-cover').removeClass('hide);
 			 $('#pageloader').fadeOut();
 			});
 	    </script>
