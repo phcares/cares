@@ -1,9 +1,7 @@
 const staticAssets = [
 	'./',
 	'./assets/css/page.css',
-	'./assets/img/logo.png',
 	'./assets/img/logo2.png',
-	'./assets/img/logo_small.png',
 	'./assets/js/page.js',
 	'//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css',
 	'https://fonts.googleapis.com/icon?family=Material+Icons',
