@@ -14,7 +14,7 @@ $(".button-collapse").sideNav();
 	    today: 'Today',
 	    clear: 'Clear',
 	    close: 'Ok',
-	    closeOnSelect: false. // Close upon selecting a date,
+	    closeOnSelect: false, // Close upon selecting a date,
 	    onClose: function() {
 		    var x = this.get('select', 'd-m-yyyy');
 		    getReportByDate(x);
