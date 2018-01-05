@@ -376,6 +376,13 @@ function checkOverTimeInOut(email){
 
 function getReportByDate(date){
   var email = $('#user_email_address').val();
+    $('.reportTimeIn1').text('');
+    $('.reportTimeOut1').text('');
+    $('.reportTimeIn2').text('');
+    $('.reportTimeOut2').text('');
+    $('.reportOverTimeIn').text('');
+    $('.reportOverTimeOut').text('');
+    $('.reportPlace').text('');
 
   var docRef = db.collection('timeRecords');
   docRef.where("user_email", "==", email).where("date", "==", date)
