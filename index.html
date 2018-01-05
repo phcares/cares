@@ -156,7 +156,7 @@
 	    	$(window).on('load', function(){
 			 //PAGE IS FULLY LOADED 
 			 //FADE OUT YOUR OVERLAYING DIV
-			
+			$('.modal').modal();
 			setTimeout(function(){ $('.login-cover').removeClass('hide'); $('#pageloader').fadeOut(); }, 3000);
 			 
 			});
