@@ -425,6 +425,9 @@ function getReportByDate(date){
 		    
 function isLate(){
 	var value = $('.timeIn1').text();
-	console.log(value);
+// 	console.log(value);
+	if(value < "08:15:00" ){
+		console.log('late');
+	}
 }
 		   
