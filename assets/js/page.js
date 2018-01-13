@@ -429,10 +429,10 @@ function isLate(){
 	var z = "6:00:00";
 	var late  = "8:15:00";
 	if(value > x || value < z){
-		console.log('ok');
+		if(value > late){
+			console.log('late');
+		}
 	}
-	if(value > late){
-		console.log('late');
-	}
+	
 }
 		   
