@@ -429,6 +429,8 @@ function isLate(){
 	var z = "6:00:00";
 	var late  = "8:15:00";
 	if(value > x || value < z){
+			$('.timeInIndicator').removeClass('red');
+			$('.timeInIndicator').removeClass('white-text');
 		if(value > late){
 			console.log('late');
 			$('.timeInIndicator').addClass('red');
