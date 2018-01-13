@@ -418,3 +418,11 @@ function getReportByDate(date){
         });
     }); 
 }
+
+
+		    
+function isLate(){
+	var value = $('.timeIn1').text();
+	console.log(value);
+}
+		   
