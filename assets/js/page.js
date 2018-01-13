@@ -431,7 +431,7 @@ function isLate(){
 	if(value > x || value < z){
 		console.log('ok');
 	}
-	if(value < late){
+	if(value > late){
 		console.log('late');
 	}
 }
