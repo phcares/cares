@@ -41,7 +41,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 		checkTimeIn2(user_email);
 		checkTimeOut2(user_email);
 		checkOverTimeIn(user_email);
-		checkOverTimeInOut(user_email);
+		checkOverTimeInOut(user_email); isLate();
 	   // console.log(user.email);
 	   var docRef = db.collection('users').where("email", "==", user_email);
 	   docRef.get()
