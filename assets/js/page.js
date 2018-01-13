@@ -431,6 +431,8 @@ function isLate(){
 	if(value > x || value < z){
 		if(value > late){
 			console.log('late');
+			$('.timeInIndicator').addClass('red');
+			$('.timeInIndicator').addClass('white-text');
 		}
 	}
 	
