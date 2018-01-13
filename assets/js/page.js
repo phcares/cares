@@ -41,7 +41,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 		checkTimeIn2(user_email);
 		checkTimeOut2(user_email);
 		checkOverTimeIn(user_email);
-		checkOverTimeInOut(user_email); isLate();
+		checkOverTimeInOut(user_email);
 	   // console.log(user.email);
 	   var docRef = db.collection('users').where("email", "==", user_email);
 	   docRef.get()
@@ -296,9 +296,11 @@ function checkTimeIn1(email){
         snapshot.docChanges.forEach(function(change) {
         	if (change.type === "added") {
                 $('.timeIn1').text(change.doc.data().timeIn1);
+			isLate();
             }
             if (change.type === "modified") {
             	$('.timeIn1').text(change.doc.data().timeIn1);
+		    isLate();
             }
         });
     });
