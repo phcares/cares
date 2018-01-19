@@ -428,6 +428,7 @@ function isLate(){
 	var x = "8:00:00";
 	var z = "6:00:00";
 	var late  = "8:15:00";
+	var allowable = "17:00:00";
 	if(value > x || value < z){
 			$('.timeInIndicator').removeClass('red');
 			$('.timeInIndicator').removeClass('white-text');
@@ -437,6 +438,8 @@ function isLate(){
 			$('.timeInIndicator').addClass('white-text');
 		}
 	}
-	
-}
+	if(value > late || value < allowable){
+		$('.timeInIndicator').addClass('red');
+		$('.timeInIndicator').addClass('white-text');
+	}
 		   
