@@ -406,6 +406,7 @@ function getReportByDate(date){
                 $('.reportOverTimeIn').text(change.doc.data().otTimeIn);
                 $('.reportOverTimeOut').text(change.doc.data().otTimeOut);
                 $('.reportPlace').text(change.doc.data().location);
+		  isReportLate();
             }
             if (change.type === "modified") {
                 $('.reportDate').html(date);
@@ -416,6 +417,7 @@ function getReportByDate(date){
                 $('.reportOverTimeIn').text(change.doc.data().otTimeIn);
                 $('.reportOverTimeOut').text(change.doc.data().otTimeOut);
                 $('.reportPlace').text(change.doc.data().location);
+		    isReportLate();
             }
         });
     }); 
@@ -443,3 +445,28 @@ function isLate(){
 		$('.timeInIndicator').addClass('white-text');
 	}
 }		   
+
+function isReportLate(){
+	var value = $('.reportTimeIn1').text();
+	var x = "8:00:00";
+	var z = "6:00:00";
+	var late  = "8:15:00";
+	var allowable = "23:00:00";
+	if(value > x || value < z){
+			$('.timeInIndicatorReport').removeClass('red');
+			$('.timeInIndicatorReport').removeClass('white-text');
+		if(value > late){
+			console.log('late');
+			$('.timeInIndicatorReport').addClass('red');
+			$('.timeInIndicatorReport').addClass('white-text');
+		}
+	}
+	if(value > late || value < allowable){
+		$('.timeInIndicatorReport').addClass('red');
+		$('.timeInIndicatorReport').addClass('white-text');
+	}
+}
+
+
+
+
