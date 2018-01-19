@@ -442,4 +442,4 @@ function isLate(){
 		$('.timeInIndicator').addClass('red');
 		$('.timeInIndicator').addClass('white-text');
 	}
-		   
+}		   
